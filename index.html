@@ -1,3 +1,16 @@
-<h1 style="color:blue;">
+<label for="numba">Username:</label>
+<input type="text" id="numba" name="numba" placeholder="Enter the numbas">
+
+<h1 class="message">
     Hello World!
 </h1>
+
+<script>
+    const input = document.getElementById("numba").value;
+    const msg = document.getElementById("message");
+    if(input > 2){
+        msg.style.display = "block";
+    } else {
+        msg.style.display = "none";
+    }
+</script>
