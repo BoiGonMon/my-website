@@ -1,16 +1,21 @@
 <label for="numba">Username:</label>
-<input type="text" id="numba" name="numba" placeholder="Enter the numbas">
+<input type="text" id="numba" name="numba" placeholder="Enter a number">
 
-<h1 class="message">
+<h1 id="message" style="display: none;">
     Hello World!
 </h1>
 
 <script>
-    const input = document.getElementById("numba").value;
+    const inputField = document.getElementById("numba");
     const msg = document.getElementById("message");
-    if(input > 2){
-        msg.style.display = "block";
-    } else {
-        msg.style.display = "none";
-    }
+
+    inputField.addEventListener("input", function() {
+        const value = Number(inputField.value);
+
+        if (value > 2) {
+            msg.style.display = "block";
+        } else {
+            msg.style.display = "none";
+        }
+    });
 </script>
